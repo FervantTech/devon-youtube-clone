@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+     <script src="preview.js" defer></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Youtube</title>
 </head>
@@ -174,23 +175,31 @@
                 <span class="copyright">&copy; 2026 Zaio YouTube Clone</span> 
         </aside>
         <main>
-            <selector class="selection-topics">
-                <button class="topic active">All</button>
-                <button class="topic">Gaming</button>
-                <button class="topic">Paralives</button>
-                <button class="topic">Mortal Kombat</button>
-                <button class="topic">The Sims</button>
-                <button class="topic">World of Warcraft</button>
-                <button class="topic">Music</button>
-                <button class="topic">Riot Games</button>
-                <button class="topic">League of Legends</button>
-                <button class="topic">Blizzard Entertainment</button>
-                <button class="topic">Action Adventure Games</button>
-                <button class="topic">Sunautica</button>
-                <button class="topic">The Witcher</button>
-                <button class="topic">Marvel Rivals</button>
-                <button class="topic">Overwatch</button>
-            </selector>
+            <div class="topics-bar">
+                <button class="topics-scroll-btn topics-scroll-back hidden" type="button" aria-label="Show previous topics">
+                    <img src="./assets/carrot.svg" alt="">
+                </button>
+                <div class="selection-topics">
+                    <button class="topic active">All</button>
+                    <button class="topic">Gaming</button>
+                    <button class="topic">Paralives</button>
+                    <button class="topic">Mortal Kombat</button>
+                    <button class="topic">The Sims</button>
+                    <button class="topic">World of Warcraft</button>
+                    <button class="topic">Music</button>
+                    <button class="topic">Riot Games</button>
+                    <button class="topic">League of Legends</button>
+                    <button class="topic">Blizzard Entertainment</button>
+                    <button class="topic">Action Adventure Games</button>
+                    <button class="topic">Sunautica</button>
+                    <button class="topic">The Witcher</button>
+                    <button class="topic">Marvel Rivals</button>
+                    <button class="topic">Overwatch</button>
+                </div>
+                <button class="topics-scroll-btn topics-scroll-forward" type="button" aria-label="Show more topics">
+                    <img src="./assets/carrot.svg" alt="">
+                </button>
+            </div>
             <div class="videos">
                 <div class="video-grid">
                     <!-- ROW 1 -->
@@ -671,5 +680,7 @@
             </div>
         </main>
     </div>
+    <script src="topics.js"></script>
+    <script src="preview.js"></script>
 </body>
 </html>
