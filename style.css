@@ -17,25 +17,104 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 16px 16px 16px 0px;
+    height: 56px;
+
+    position: sticky;
 }
 .left-nav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    position: relative;
+    margin-left: 25px;
+    width: 149px;
+}
+#region-name{
+    position: absolute;
+    font-size: 10px;
+    font-weight: 500;
+    color: #606060;
+    right: -21px;
+    top: -8px;
+    padding: 2px 4px;
 }
 .middle-nav{
     display: flex;
     align-items: center;
+    width: 732px;
+    height: 38px;   
+    padding: 0px 30px;
+}
+#search-bar{
+    width: 540px;
+    height: 100%;
+    border: 1px solid #cccccc;
+    padding-left: 10px;
+    border-radius: 40px 0px 0px 40px;
+}
+#search-button{
+    width: 60px;
+    height: 100%;
+    border: 1px solid #cccccc;
+    border-left: none;
+    border-radius: 0 40px 40px 0;
+}
+.voice-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    margin-left: 15px;
+
 }
 .right-nav{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    height: 38px;
+    width: 200px;
+
 }
+.nav-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100%;
+    border-radius: 40px;
+    background: #f0f0f0;
+    border: none;
+}
+
+#notifications-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    background: #ffffff;
+}
+
+#account-circle{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
 /* SIDE BAR SECTION */
 aside {
     width: 240px;
     height: 100%;
     padding: 25px;
+    overflow-y: scroll;
 }
+
 .side-bar-section{
     display: flex;
     flex-direction: column;
@@ -53,10 +132,10 @@ aside {
 .videos {
     width: calc(100vw - 240px);
     height: 100%;
-
-    border-top: 1px solid #cccccc;
     overflow-y: scroll;
+
 }
+
 .video-grid {
     display: flex;
     flex-wrap: wrap;
