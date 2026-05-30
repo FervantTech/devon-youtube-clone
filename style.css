@@ -1,5 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+:root {
+    --bg: #ffffff;
+    --text: #0f0f0f;
+    --text-secondary: #606060;
+    --text-muted: #676767;
+    --border: #cccccc;
+    --border-light: #e5e5e5;
+    --surface-hover: #f2f2f2;
+    --surface-muted: #f0f0f0;
+    --chip-bg: #f2f2f2;
+    --chip-active-bg: #0f0f0f;
+    --chip-active-text: #ffffff;
+    --input-bg: #ffffff;
+    --icon-color: #0f0f0f;
+}
+
+html.dark-mode {
+    --bg: #0f0f0f;
+    --text: #f1f1f1;
+    --text-secondary: #aaaaaa;
+    --text-muted: #909090;
+    --border: #3f3f3f;
+    --border-light: #3f3f3f;
+    --surface-hover: #272727;
+    --surface-muted: #272727;
+    --chip-bg: #272727;
+    --chip-active-bg: #f1f1f1;
+    --chip-active-text: #0f0f0f;
+    --input-bg: #121212;
+    --icon-color: #f1f1f1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +42,9 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 
@@ -25,7 +60,8 @@ nav{
     position: sticky;
     top: 0;
     z-index: 1000;
-    background: white;
+    background: var(--bg);
+    transition: background-color 0.2s ease;
 }
 .left-nav{
     display: flex;
@@ -36,11 +72,26 @@ nav{
     margin-left: 25px;
     width: 149px;
 }
+.logo {
+    width: 101px;
+    height: 20px;
+    color: var(--text);
+}
+.logo svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+html.dark-mode .short-icon,
+html.dark-mode .carrot-icon,
+html.dark-mode .topics-scroll-btn img {
+    filter: brightness(0) invert(1);
+}
 #region-name{
     position: absolute;
     font-size: 10px;
     font-weight: 500;
-    color: #606060;
+    color: var(--text-secondary);
     right: -21px;
     top: -8px;
     padding: 2px 4px;
@@ -56,16 +107,23 @@ nav{
 #search-bar{
     width: 540px;
     height: 100%;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--border);
     padding-left: 10px;
     border-radius: 40px 0px 0px 40px;
+    background: var(--input-bg);
+    color: var(--text);
+}
+#search-bar::placeholder {
+    color: var(--text-secondary);
 }
 #search-button{
     width: 60px;
     height: 100%;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--border);
     border-left: none;
     border-radius: 0 40px 40px 0;
+    background: var(--surface-muted);
+    color: var(--icon-color);
 }
 .voice-search{
     display: flex;
@@ -74,16 +132,16 @@ nav{
     width: 38px;
     height: 38px;
     border-radius: 50%;
-    background: #f0f0f0;
+    background: var(--surface-muted);
     margin-left: 15px;
-
+    color: var(--icon-color);
 }
 .right-nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 38px;
-    width: 200px;
+    width: 240px;
 
 }
 .nav-button{
@@ -93,8 +151,26 @@ nav{
     width: 100px;
     height: 100%;
     border-radius: 40px;
-    background: #f0f0f0;
+    background: var(--surface-muted);
     border: none;
+    color: var(--icon-color);
+}
+
+#theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    color: var(--icon-color);
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    background: var(--surface-hover);
 }
 
 #notifications-button{
@@ -104,7 +180,8 @@ nav{
     width: 38px;
     height: 38px;
     border: none;
-    background: #ffffff;
+    background: var(--bg);
+    color: var(--icon-color);
 }
 
 #account-circle{
@@ -131,7 +208,7 @@ aside:hover{
     flex-direction: column;
 }
 .category.active{
-    background: #f2f2f2;
+    background: var(--surface-hover);
     font-weight: 500;
     
 }
@@ -155,7 +232,7 @@ aside:hover{
     margin-right: 17px;
 }
 .side-bar-section {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--border);
     margin-top: 10px;
 }
 .side-bar-section .category:last-child {
@@ -163,7 +240,7 @@ aside:hover{
 }
 .side-bar_heading {
     margin: 10px 0px 10px 0px;
-    color: #0f0f0f;
+    color: var(--text);
     font-size: 16px;
     font-weight: 450;
 
@@ -197,7 +274,7 @@ aside:hover{
     text-overflow: ellipsis;
 }
 .category:hover {
-    background: #f2f2f2;
+    background: var(--surface-hover);
 }
 .account-circle img{
     width: 24px;
@@ -215,12 +292,12 @@ aside:hover{
     font-size: 13px;
     font-weight: 500;
     margin-right: 10px;
-    color: #606060;
+    color: var(--text-secondary);
     cursor: pointer;
 
 }
 .copyright {
-    color: #676767;
+    color: var(--text-muted);
     font-size: 13px;
     font-weight: 400;
     margin-bottom: 20px;
@@ -246,8 +323,9 @@ main{
     align-items: center;
     gap: 8px;
     padding: 10px 0 21px 0;
-    background: white;
+    background: var(--bg);
     z-index: 100;
+    transition: background-color 0.2s ease;
 }
 .selection-topics{          
     display: flex;
@@ -267,9 +345,9 @@ main{
     flex-shrink: 0;
     width: 32px;
     height: 32px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--border-light);
     border-radius: 50%;
-    background: white;
+    background: var(--bg);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -283,7 +361,7 @@ main{
     margin-right: 10px;
 }
 .topics-scroll-btn:hover {
-    background: #f2f2f2;
+    background: var(--surface-hover);
 }
 .topics-scroll-btn img {
     width: 20px;
@@ -309,11 +387,11 @@ main{
 }
 .topics-bar::before {
     right: 52px;
-    background: linear-gradient(to right, transparent, white);
+    background: linear-gradient(to right, transparent, var(--bg));
 }
 .topics-bar::after {
     left: 52px;
-    background: linear-gradient(to left, transparent, white);
+    background: linear-gradient(to left, transparent, var(--bg));
 }
 .topics-bar.can-scroll-forward::before {
     opacity: 1;
@@ -327,8 +405,8 @@ main{
     padding: 0 12px;
     border: none;
     border-radius: 8px;
-    background: #f2f2f2;
-    color: #0f0f0f;
+    background: var(--chip-bg);
+    color: var(--text);
     font-size: 14px;
     font-weight: 500;
     cursor: pointer;
@@ -336,8 +414,8 @@ main{
     margin: 0px 7px;
 }
 .selection-topics .topic.active {
-    background: #0f0f0f;
-    color: white;
+    background: var(--chip-active-bg);
+    color: var(--chip-active-text);
 }
 .videos {
     width: 100%;
@@ -420,7 +498,7 @@ main{
 .video .posted-by{
     font-size:  14px ;
     font-weight: 400 ;
-    color: #606060;
+    color: var(--text-secondary);
 }
 .videos .details {
     display: flex;
@@ -439,6 +517,7 @@ main{
     display: flex;
     align-items: flex-start;
     justify-content: flex-end;
+    color: var(--icon-color);
 }
 
 .video .profile{
@@ -448,6 +527,13 @@ main{
     border-radius: 50%;
     width: 36x;
     height: 36px;
+}
+
+.left-nav .material-icons,
+.middle-nav .material-icons,
+.right-nav .material-icons,
+aside .material-icons {
+    color: var(--icon-color);
 }
 
 @media (max-width: 1024px) {
