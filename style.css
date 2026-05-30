@@ -62,15 +62,14 @@ aside {
     flex-wrap: wrap;
 }
 .video {
-   
-    width: calc(25%-10px);
-    margin-right: 10px;
-    cursor: pointer;
-    margin-bottom: 35px ;
+    width: calc((100% - 40px) / 3);
+    margin: 0px;
+    padding: 15px 15px 0px 0px;
+
 }
 .video .thumbnail img{
-    width: 75%;
-    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
 }
 .video .video-details p{
     font-size: 14px;
@@ -85,9 +84,21 @@ aside {
 }
 .videos .details {
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+;
+}
+.video .details .details-left {
+    display: flex;
     margin: 5px;
     width: 90%;
-    
+}
+.video .details .details-right {
+    width: 10%;
+    margin-top: 5px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
 }
 
 .video .profile{
