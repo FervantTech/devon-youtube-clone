@@ -280,14 +280,19 @@ main{
 }
 .video {
     width: calc(33.333% - 10px);
-    margin: 0px;
-    padding: 15px 15px 0px 0px;
+    padding: 15px;
     box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
 
+    transition: background-color 0.2s ease;
 }
 .video .thumbnail img{
     width: 100%;
     border-radius: 10px;
+}
+.video:hover {
+    background-color: #f2f2f2;
 }
 .video .video-details p{
     font-size: 14px;
