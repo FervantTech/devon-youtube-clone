@@ -432,7 +432,6 @@ main{
     box-sizing: border-box;
     border-radius: 10px;
     cursor: pointer;
-
     transition: background-color 0.2s ease;
 }
 .video .thumbnail {
