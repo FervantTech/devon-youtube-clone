@@ -44,3 +44,57 @@ aside {
     width: 20px;
     margin-right: 10px;
 }
+/* VIDEO SECTION */
+.main-body{
+    height: calc(100vh - 56px);
+    display: flex;
+    overflow: hidden;
+}
+.videos {
+    width: calc(100vw - 240px);
+    height: 100%;
+
+    border-top: 1px solid #cccccc;
+    overflow-y: scroll;
+}
+.video-grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+.video {
+   
+    width: calc(25%-10px);
+    margin-right: 10px;
+    cursor: pointer;
+    margin-bottom: 35px ;
+}
+.video .thumbnail img{
+    width: 75%;
+    padding: 15px;
+}
+.video .video-details p{
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.video .posted-by{
+    font-size:  14px ;
+    font-weight: 500 ;
+    color: #606060;
+}
+.videos .details {
+    display: flex;
+    margin: 5px;
+    width: 90%;
+    
+}
+
+.video .profile{
+    margin-right: 12px;
+}
+.video .profile img{
+    border-radius: 50%;
+    width: 36x;
+    height: 36px;
+}
