@@ -63,6 +63,9 @@ nav{
     background: var(--bg);
     transition: background-color 0.2s ease;
 }
+#menu-icon{
+    cursor: pointer;
+}
 .left-nav{
     display: flex;
     align-items: center;
@@ -76,6 +79,7 @@ nav{
     width: 101px;
     height: 20px;
     color: var(--text);
+    cursor: pointer;
 }
 .logo svg {
     width: 100%;
@@ -124,6 +128,7 @@ html.dark-mode .topics-scroll-btn img {
     border-radius: 0 40px 40px 0;
     background: var(--surface-muted);
     color: var(--icon-color);
+    cursor: pointer;
 }
 .voice-search{
     display: flex;
@@ -135,6 +140,7 @@ html.dark-mode .topics-scroll-btn img {
     background: var(--surface-muted);
     margin-left: 15px;
     color: var(--icon-color);
+    cursor: pointer;
 }
 .right-nav{
     display: flex;
@@ -154,6 +160,7 @@ html.dark-mode .topics-scroll-btn img {
     background: var(--surface-muted);
     border: none;
     color: var(--icon-color);
+    cursor: pointer;
 }
 
 #theme-toggle {
@@ -182,12 +189,14 @@ html.dark-mode .topics-scroll-btn img {
     border: none;
     background: var(--bg);
     color: var(--icon-color);
+    cursor: pointer;
 }
 
 #account-circle{
     width: 35px;
     height: 35px;
     border-radius: 50%;
+    cursor: pointer;
 }
 
 /* SIDE BAR SECTION */
@@ -247,6 +256,7 @@ aside:hover{
     display:flex;
     flex-direction: row;
     align-items: center;
+    cursor: pointer;
 }
 .carrot-icon{
     width: 16px;
@@ -309,12 +319,17 @@ main{
     flex: 1;
     overflow-y: auto;
     min-height: 0;
+
+    scrollbar-color: var(--chip-active-bg) var(--chip-active-text) 
+
+
 }
 .main-body{
     display: flex;
     height: calc(100vh - 56px);
     gap: 20px;
     overflow: hidden;
+
 }    
 .topics-bar {
     position: sticky;
@@ -337,6 +352,7 @@ main{
     white-space: nowrap;
     scrollbar-width: none;
     scroll-behavior: smooth;
+
 }
 .selection-topics::-webkit-scrollbar {
     display: none;
