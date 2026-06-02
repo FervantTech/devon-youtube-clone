@@ -207,7 +207,7 @@ aside {
     overflow-y: auto;
     scrollbar-width: none;
     padding-right: 20px;
-    margin-left: 25px
+    margin-left: 25px;
 }
 aside:hover{
     scrollbar-width: thin;
@@ -540,7 +540,7 @@ main{
 }
 .video .profile img{
     border-radius: 50%;
-    width: 36x;
+    width: 36px;
     height: 36px;
 }
 
